@@ -1,7 +1,0 @@
-name: FreeVoter
-version: 1.0
-main: ru.kotikstasika.freevoter.FreeVoter
-api-version: '1.21'
-commands:
-  getprize:
-  freevoter:
