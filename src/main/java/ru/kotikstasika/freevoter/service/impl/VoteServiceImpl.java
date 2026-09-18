@@ -8,7 +8,6 @@ import lombok.experimental.FieldDefaults;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import ru.kotikstasika.freevoter.FreeVoter;
-import ru.kotikstasika.freevoter.cache.VoteCache;
 import ru.kotikstasika.freevoter.config.ConfigManager;
 import ru.kotikstasika.freevoter.data.PlayerVoteData;
 import ru.kotikstasika.freevoter.database.api.DatabaseManager;
@@ -34,16 +33,14 @@ public class VoteServiceImpl implements VoteService {
     FreeVoter plugin;
     ConfigManager config;
     DatabaseManager database;
-    VoteCache cache;
     HttpClient httpClient;
     Gson gson;
     Set<String> processing = ConcurrentHashMap.newKeySet();
 
-    public VoteServiceImpl(FreeVoter plugin, ConfigManager config, DatabaseManager database, VoteCache cache) {
+    public VoteServiceImpl(FreeVoter plugin, ConfigManager config, DatabaseManager database) {
         this.plugin = plugin;
         this.config = config;
         this.database = database;
-        this.cache = cache;
         this.httpClient = HttpClient.newHttpClient();
         this.gson = new Gson();
     }
@@ -160,7 +157,6 @@ public class VoteServiceImpl implements VoteService {
                 data.setLastVoteAt(votedAt);
 
                 database.savePlayerData(data).thenRun(() -> {
-                    cache.put(data);
                     Duration untilReset = Duration.between(now, nextMidnightMsk);
                     long h = untilReset.toHours();
                     long m = untilReset.toMinutesPart();
