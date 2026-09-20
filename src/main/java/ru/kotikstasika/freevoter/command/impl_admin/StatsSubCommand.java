@@ -34,7 +34,7 @@ public class StatsSubCommand extends SubCommand {
             return;
         }
 
-        String targetNickname = args[2];
+        String targetNickname = args[1];
         voteService.getPlayerStats(targetNickname).thenAccept(data -> {
             Bukkit.getScheduler().runTask(plugin, () -> {
                 if (data == null || data.getNickname().isEmpty()) {

@@ -23,6 +23,7 @@ public class ConfigManager {
     List<String> noVotesMessage;
     List<String> oldVotesMessage;
     List<String> giveMessage;
+    List<String> giveAllMessage;
 
     String errorDefault;
     String error401Console;
@@ -57,6 +58,7 @@ public class ConfigManager {
         this.hasKassedMessage = config.getStringList("message.haskd");
         this.noVotesMessage = config.getStringList("message.nonegolos");
         this.giveMessage = config.getStringList("message.give");
+        this.giveAllMessage = config.getStringList("message.alertall");
         this.oldVotesMessage = config.getStringList("message.old");
 
         this.errorDefault = config.getString("message.errors.default", "");

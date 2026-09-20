@@ -28,6 +28,9 @@ message:
   nonegolos:
     - "Вы еще не голосовали за"
     - "https://top-minecrafter.com/server/cherryworld/"
+  alertall:
+    - "Окак, игрок получил {prize}"
+    - "Хочешь так же? Пиши /getprize"
   give:
     - "Вы получили:"
     - "{prize}"

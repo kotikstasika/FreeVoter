@@ -63,7 +63,9 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Gradle.FreeVoter [buildDependents].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.FreeVoter [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.FreeVoter [clean].executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/kotikstasika/Desktop/sorsecodee/ForMyServer/Ready/noTouch/FreeVoter&quot;,
@@ -84,7 +86,29 @@
       <recent name="com.freevoter" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.FreeVoter [build]">
+    <configuration name="FreeVoter [buildDependents]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="buildDependents" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="FreeVoter [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -107,9 +131,33 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="FreeVoter [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.FreeVoter [build]" />
+        <item itemvalue="Gradle.FreeVoter [clean]" />
+        <item itemvalue="Gradle.FreeVoter [buildDependents]" />
       </list>
     </recent_temporary>
   </component>
@@ -133,6 +181,17 @@
       <workItem from="1789679298733" duration="430000" />
       <workItem from="1789679950809" duration="88000" />
       <workItem from="1789680533172" duration="2543000" />
+      <workItem from="1789684211848" duration="7225000" />
+      <workItem from="1789692955301" duration="4506000" />
+      <workItem from="1789749616762" duration="15000" />
+      <workItem from="1789757150543" duration="7000" />
+      <workItem from="1789757943429" duration="13000" />
+      <workItem from="1789757999819" duration="67000" />
+      <workItem from="1789758101609" duration="3000" />
+      <workItem from="1789761171112" duration="8000" />
+      <workItem from="1789782339681" duration="724000" />
+      <workItem from="1789818258055" duration="676000" />
+      <workItem from="1789860899093" duration="881000" />
     </task>
     <servers />
   </component>

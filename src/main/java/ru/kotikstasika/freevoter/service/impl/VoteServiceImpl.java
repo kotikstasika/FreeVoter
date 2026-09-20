@@ -166,14 +166,17 @@ public class VoteServiceImpl implements VoteService {
                     Bukkit.getScheduler().runTask(plugin, () -> {
                         String prizeText = String.join(", ", config.getRewardMessages());
 
-                        for (String line : config.getGiveMessage()) {
-                            String formatted = line.replace("{prize}", prizeText).replace("{time}", resetTime);
-                            player.sendMessage(Parser.color(formatted));
-                        }
+                        List<String> messageForPlayer = config.getGiveAllMessage().stream().map(message -> message.replace("{prize}", prizeText).replace("{time}", resetTime)).map(Parser::color).toList();
+                        messageForPlayer.forEach(player::sendMessage);
 
                         for (String cmd : config.getRewardCommands()) {
                             String formatted = cmd.replace("{player}", player.getName());
                             Bukkit.dispatchCommand(Bukkit.getConsoleSender(), formatted);
+                        }
+
+                        List<String> messagesForAllPlayers = config.getGiveAllMessage().stream().map(message -> message.replace("{prize}", prizeText).replace("{time}", resetTime).replace("{player}", player.getName())).map(Parser::color).toList();
+                        for (Player onlinePlayer : Bukkit.getOnlinePlayers()) {
+                            messagesForAllPlayers.forEach(onlinePlayer::sendMessage);
                         }
                     });
                 });
